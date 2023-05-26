@@ -1,0 +1,2 @@
+boto3==1.26.108
+prettytable==3.6.0
