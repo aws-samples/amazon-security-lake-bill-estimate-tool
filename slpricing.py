@@ -1,11 +1,15 @@
 import boto3
 import json
+import os
 
 priceList = []
 #retrieve price list
 def getPriceList():
     global priceList
-    pricing = boto3.client('pricing')
+    pricing_client_region = 'us-east-1' # price list service API provides two endpoints: us-east-1 and ap-south-1
+    if os.getenv("AWS_DEFAULT_REGION") == 'ap-south-1':
+        pricing_client_region = 'ap-south-1'
+    pricing = boto3.client('pricing', region_name=pricing_client_region)
     response = pricing.get_products( ServiceCode='AmazonSecurityLake')
     priceList = response['PriceList']
     while "NextToken" in response:
