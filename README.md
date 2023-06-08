@@ -95,3 +95,5 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 ## License
 
 This project is licensed under the Apache-2.0 License.
+
+[![GitHub Clones](https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.githubusercontent.com/VoicuAWS/d33921a618b7363acac225359015dcc0/raw/clone.json&logo=github)](https://github.com/aws-samples/amazon-security-lake-bill-estimate-tool)
